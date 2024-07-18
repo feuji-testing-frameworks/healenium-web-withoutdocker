@@ -9,6 +9,7 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 - An IDE (e.g., IntelliJ IDEA, Eclipse)
 - Web browser (e.g., Chrome, Firefox)
 - WebDriver for the chosen browser
+- PostgreSQL
 
 ## Project Setup
 
@@ -77,9 +78,59 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 
    Ensure the Healenium server is running. Refer to the Healenium documentation for more details.
 
+1. We need install first :
+ Java 11+ , Python ( 3.12.0 )& PostgreSQL ( prefer to use latest 16 version )
+
+2. Once PostgersSQL installed ( make sure during installation whatever you put the password for the same you remember / noted down, need this is in 3rd step), open SQL Shell ( psql ) from the applications, as shown below:
+
+
+3. Once you open the Shell , hit ENTER till Username & provide same Password as in the step 2. 
+
+
+4. Now , feed one by one on the above terminal, this will create the DB ,  User & Schema for you:
+   
+     4.1 : CREATE DATABASE healenium;
+     4.2 : CREATE USER healenium_user WITH ENCRYPTED PASSWORD 'YDk2nmNs4s9aCP6K';
+     4.3 : GRANT ALL PRIVILEGES ON DATABASE healenium TO healenium_user;
+     4.4 : ALTER USER healenium_user WITH SUPERUSER;
+     4.5 : \c healenium healenium_user;
+     4.6 : CREATE SCHEMA healenium AUTHORIZATION healenium_user;
+     4.7 : GRANT USAGE ON SCHEMA healenium TO healenium_user;
+
+
+and keep hit the ENTER after Each line you will get the O/p like below:
+
+5. Now install Heleanium-Web : 
+
+From the official document page by hitting download link 
+https://healenium.io/docs/download_and_install/hlm_web
+
+or use direct link :
+
+https://github.com/healenium/healenium/releases/download/1.4.0/healenium-1.4.0.zip
+
+
+6. Now Go to directory  /shell-installation/web, where the above Heleanium zip extracted.
+
+     6. 1 Download Healenium components. Run download_services.sh 
+             If you are using Windows use cmd and use : run download_services.sh 
+             or direct hit on the download_services.sh file.
+
+             And on MacOX use new Terminal navigate to the respective directory & 
+type : chmod +x <and compete shell-installation/web PWD )
+on the next line type : sh download_services.sh
+
+    6.2 Run start_healenium.sh
+       use the above Windows suggestion for Win
+       and on Mac use sh start_healenium.sh
+
+
+7. Now check are you able to see healenium report at localhost : 7878
+
+
 3. **Run Tests**
 
-   Execute the tests using your IDE or the following Maven command:
+   Execute the tests using your IDE or the following Maven command :
 
    ```sh
    mvn test
