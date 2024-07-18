@@ -80,13 +80,13 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 
    4. Now , feed one by one on the above terminal, this will create the DB ,  User & Schema for you:
    
-     4.1 : CREATE DATABASE healenium;
-     4.2 : CREATE USER healenium_user WITH ENCRYPTED PASSWORD 'YDk2nmNs4s9aCP6K';
-     4.3 : GRANT ALL PRIVILEGES ON DATABASE healenium TO healenium_user;
-     4.4 : ALTER USER healenium_user WITH SUPERUSER;
-     4.5 : \c healenium healenium_user;
-     4.6 : CREATE SCHEMA healenium AUTHORIZATION healenium_user;
-     4.7 : GRANT USAGE ON SCHEMA healenium TO healenium_user;
+           CREATE DATABASE healenium
+           CREATE USER healenium_user WITH ENCRYPTED PASSWORD 'YDk2nmNs4s9aCP6K'
+           GRANT ALL PRIVILEGES ON DATABASE healenium TO healenium_user
+           ALTER USER healenium_user WITH SUPERUSER
+           \c healenium healenium_user
+           CREATE SCHEMA healenium AUTHORIZATION healenium_user
+           GRANT USAGE ON SCHEMA healenium TO healenium_user
 
 
       and keep hit the ENTER after Each line you will get the O/p like below:
@@ -103,15 +103,15 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 
    6. Now Go to directory  /shell-installation/web, where the above Heleanium zip extracted.
 
-     6. 1 Download Healenium components. Run download_services.sh 
+      1. Download Healenium components. Run download_services.sh 
              If you are using Windows use cmd and use : run download_services.sh 
              or direct hit on the download_services.sh file.
 
              And on MacOX use new Terminal navigate to the respective directory & 
-   type : chmod +x <and compete shell-installation/web PWD )
-   on the next line type : sh download_services.sh
+      type : chmod +x <and compete shell-installation/web PWD )
+      on the next line type : sh download_services.sh
 
-       6.2 Run start_healenium.sh
+       2. Run start_healenium.sh
           use the above Windows suggestion for Win
           and on Mac use sh start_healenium.sh
 
