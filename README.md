@@ -69,25 +69,16 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 
 2. **Healenium Configuration**
 
-   Create a `healenium.properties` file in the `src/main/resources` directory with the following content:
-
-   ```properties
-   hlm.server.url=http://localhost:7878
-   hlm.save.elements=true
-   ```
-
    Ensure the Healenium server is running. Refer to the Healenium documentation for more details.
 
-1. We need install first :
- Java 11+ , Python ( 3.12.0 )& PostgreSQL ( prefer to use latest 16 version )
+   1. We need install first :
+      Java 11+ , Python ( 3.12.0 )& PostgreSQL ( prefer to use latest 16 version )
 
-2. Once PostgersSQL installed ( make sure during installation whatever you put the password for the same you remember / noted down, need this is in 3rd step), open SQL Shell ( psql ) from the applications, as shown below:
+   2. Once PostgersSQL installed ( make sure during installation whatever you put the password for the same you remember / noted down, need this is in 3rd step), open SQL Shell ( psql ) from the                    applications, as shown below:
 
+   3. Once you open the Shell , hit ENTER till Username & provide same Password as in the step 2. 
 
-3. Once you open the Shell , hit ENTER till Username & provide same Password as in the step 2. 
-
-
-4. Now , feed one by one on the above terminal, this will create the DB ,  User & Schema for you:
+   4. Now , feed one by one on the above terminal, this will create the DB ,  User & Schema for you:
    
      4.1 : CREATE DATABASE healenium;
      4.2 : CREATE USER healenium_user WITH ENCRYPTED PASSWORD 'YDk2nmNs4s9aCP6K';
@@ -98,34 +89,34 @@ This project demonstrates the integration of Selenium with Healenium for self-he
      4.7 : GRANT USAGE ON SCHEMA healenium TO healenium_user;
 
 
-and keep hit the ENTER after Each line you will get the O/p like below:
+      and keep hit the ENTER after Each line you will get the O/p like below:
 
-5. Now install Heleanium-Web : 
+   5. Now install Heleanium-Web : 
 
-From the official document page by hitting download link 
-https://healenium.io/docs/download_and_install/hlm_web
+   From the official document page by hitting download link 
+   https://healenium.io/docs/download_and_install/hlm_web
 
-or use direct link :
+   or use direct link :
 
-https://github.com/healenium/healenium/releases/download/1.4.0/healenium-1.4.0.zip
+   https://github.com/healenium/healenium/releases/download/1.4.0/healenium-1.4.0.zip
 
 
-6. Now Go to directory  /shell-installation/web, where the above Heleanium zip extracted.
+   6. Now Go to directory  /shell-installation/web, where the above Heleanium zip extracted.
 
      6. 1 Download Healenium components. Run download_services.sh 
              If you are using Windows use cmd and use : run download_services.sh 
              or direct hit on the download_services.sh file.
 
              And on MacOX use new Terminal navigate to the respective directory & 
-type : chmod +x <and compete shell-installation/web PWD )
-on the next line type : sh download_services.sh
+   type : chmod +x <and compete shell-installation/web PWD )
+   on the next line type : sh download_services.sh
 
-    6.2 Run start_healenium.sh
-       use the above Windows suggestion for Win
-       and on Mac use sh start_healenium.sh
+       6.2 Run start_healenium.sh
+          use the above Windows suggestion for Win
+          and on Mac use sh start_healenium.sh
 
 
-7. Now check are you able to see healenium report at localhost : 7878
+   7. Now check are you able to see healenium report at localhost : 7878
 
 
 3. **Run Tests**
