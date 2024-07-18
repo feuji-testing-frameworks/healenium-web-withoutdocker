@@ -1,8 +1,4 @@
-# healenium-web-withoutdocker
-Here's the complete `README.md` content you can copy and paste into your file:
-
-```markdown
-# Selenium-Healenium with Java Project
+# Selenium-Healenium-web-withoutdocker
 
 This project demonstrates the integration of Selenium with Healenium for self-healing automation tests in Java without using Docker.
 
