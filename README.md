@@ -93,25 +93,24 @@ This project demonstrates the integration of Selenium with Healenium for self-he
 
    5. Now install Heleanium-Web : 
 
-   From the official document page by hitting download link 
-   https://healenium.io/docs/download_and_install/hlm_web
+      From the official document page by hitting download link 
+      https://healenium.io/docs/download_and_install/hlm_web
 
-   or use direct link :
+      or use direct link :
 
-   https://github.com/healenium/healenium/releases/download/1.4.0/healenium-1.4.0.zip
+      https://github.com/healenium/healenium/releases/download/1.4.0/healenium-1.4.0.zip
 
 
    6. Now Go to directory  /shell-installation/web, where the above Heleanium zip extracted.
 
       1. Download Healenium components. Run download_services.sh 
-             If you are using Windows use cmd and use : run download_services.sh 
-             or direct hit on the download_services.sh file.
+            If you are using Windows use cmd and use : run download_services.sh 
+            or direct hit on the download_services.sh file.
+            And on MacOX use new Terminal navigate to the respective directory & 
+            type : chmod +x <and compete shell-installation/web PWD )
+            on the next line type : sh download_services.sh
 
-             And on MacOX use new Terminal navigate to the respective directory & 
-      type : chmod +x <and compete shell-installation/web PWD )
-      on the next line type : sh download_services.sh
-
-       2. Run start_healenium.sh
+       3. Run start_healenium.sh
           use the above Windows suggestion for Win
           and on Mac use sh start_healenium.sh
 
