@@ -4,6 +4,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.healenium.base.Base;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -17,6 +19,7 @@ public class SauceDemoTest extends Base {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
+//        driver.get("file:///Users/kishore/Desktop/Github/healenium-web-withoutdocker/src/test/page.html");
         driver.get("https://www.saucedemo.com/");
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
@@ -90,4 +93,33 @@ public class SauceDemoTest extends Base {
         assertEquals(homePage.getProductText(),productText);
         loginPage.logout();
     }
+
+//    @Test(priority = 4)
+//    public void demoIframe() {
+//        test = extent.createTest("Checking the login functionality").assignAuthor("karthik");
+//        //Store the web element
+//        WebElement iframe = driver.findElement(By.id("iframe-1"));
+//
+////Switch to the frame
+//        driver.switchTo().frame(iframe);
+//
+////Now we can click the button
+//        driver.findElement(By.xpath("//a[text()='Docs']")).click();
+//        // Return to the top level
+//        driver.switchTo().defaultContent();
+//    }
+//    @Test(priority = 5)
+//    public void demoIframehtml() {
+//        test = extent.createTest("Checking the login functionality").assignAuthor("karthik");
+//        //Store the web element
+//        WebElement iframe = driver.findElement(By.id("buttonIframe"));
+//
+////Switch to the frame
+//        driver.switchTo().frame(iframe);
+//
+////Now we can click the button
+//        driver.findElement(By.xpath("//button[text()='Button 1']")).click();
+//        // Return to the top level
+//        driver.switchTo().defaultContent();
+//    }
 }

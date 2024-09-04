@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe with Buttons Example</title>
+</head>
+<body>
+<h1>Iframe with Buttons Example</h1>
+<p>This example demonstrates an iframe containing buttons.</p>
+
+<iframe id="buttonIframe" width="600" height="400" title="Button Iframe"></iframe>
+
+<p>More content on the main page.</p>
+
+<script>
+    // Create the content of the iframe
+    const iframeContent = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Iframe Content</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    padding: 20px;
+                }
+                button {
+                    margin: 5px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Buttons in Iframe</h2>
+            <button>Button 1</button>
+            <button onclick="alert('Button 2 clicked!')">Button 2</button>
+            <button onclick="alert('Button 3 clicked!')">Button 3</button>
+        </body>
+        </html>
+    `;
+
+    // Set the iframe's content
+    const iframe = document.getElementById('buttonIframe');
+    iframe.srcdoc = iframeContent;
+</script>
+</body>
+</html>
